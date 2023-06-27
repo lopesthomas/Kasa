@@ -1,5 +1,10 @@
+import Card from '../../components/Card'
+
 function Home() {
-    return
+    return (
+    <div className='card-container'>
+        <Card/>
+    </div>)
 }
 
 export default Home

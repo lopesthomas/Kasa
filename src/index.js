@@ -17,8 +17,8 @@ root.render(
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/" element={<Location/>}/>
-        <Route path="/" element={<Error/>}/>
+        <Route path="/location" element={<Location/>}/>
+        <Route path="*" element={<Error/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
