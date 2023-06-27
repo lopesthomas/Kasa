@@ -1,13 +1,15 @@
 import data from '../../data/logements.json'
-import bckred from '../../assets/bckred.png'
+import { Link } from 'react-router-dom'
 
 function Card() {
+
     return (
     <div>
         {data.map((item, i) => (
-            <div key={i}>                   
-            <div id={item.id} className='card'><img src={item.cover} alt={item.tags}></img><div className='title-card'>{item.title}</div></div>                    
-            </div>
+            <Link key={i} to={`/location/${item.id}`}>                   
+                <div id={item.id} className='card'><img src={item.cover} alt={item.tags}></img><div className='title-card'>{item.title}</div></div>                    
+            </Link>
+            
             ))}
     </div>)
 }
