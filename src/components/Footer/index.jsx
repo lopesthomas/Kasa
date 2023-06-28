@@ -1,8 +1,9 @@
 import flogo from '../../assets/flogo.png'
+import '../../assets/style.scss'
 
 function Footer() {
     return (
-        <div>
+        <div className='footer'>
             <img src={flogo} alt="Logo Footer" />
             <p>© 2020 Kasa. All rights reserved</p>
         </div>

@@ -1,5 +1,6 @@
 import logoo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
+import '../../assets/style.scss'
 
 function Header() {
     return (
@@ -7,9 +8,9 @@ function Header() {
         <Link to="/">
             <img src={logoo} alt="Logo" />
         </Link>
-        <div>
+        <div className='liens'>
             <Link to="/">Accueil</Link>
-            <Link to="/apropos">A propos</Link>
+            <Link to="/apropos">A Propos</Link>
         </div>
     </div>)
 }
