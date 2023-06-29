@@ -16,19 +16,23 @@ function Slider() {
     function preced() {
         if (imageIndex > 0){
             setImageIndex(imageIndex - 1)
+        } else {
+            setImageIndex(annonce.pictures.length - 1)
         }
     }
 
     function suivant() {
         if (imageIndex < pictures.length - 1){
             setImageIndex(imageIndex + 1)
+        } else {
+            setImageIndex(0)
         }
 
     }
 
     return (
         <div className='slider'>
-            <img src={currentPicture} alt={`Photo numero ${imageIndex + 1}`} className='slider-img'/>
+            <img src={currentPicture} alt={`Location ph numero:  ${imageIndex + 1}`} className='slider-img'/>
             { 1 !== pictures.length ?
                 <div><button className='slider-button-preced' onClick={preced}><img src={leftArrow} alt='Precedent' /></button>
                 <button className='slider-button-suiv' onClick={suivant}><img src={rightArrow} alt='Suivant' /></button>
