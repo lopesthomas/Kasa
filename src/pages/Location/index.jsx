@@ -1,6 +1,7 @@
 import data from '../../data/logements.json'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import Slider from '../../components/Slider';
 
 function Location() {
     const { idLink } = useParams()
@@ -15,8 +16,9 @@ function Location() {
 
   // Affiche les détails de l'annonce
   return (
-    <div>
-        {annonce.pictures.map((item, id) => <img key={id} src={item} alt={annonce.titre} /> )}
+    <div className='location'>
+        <Slider/>
+        {/* {annonce.pictures.map((item, id) => <img key={id} src={item} alt={annonce.titre} /> )} */}
         
         <div>
             <div>

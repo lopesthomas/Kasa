@@ -1,5 +1,5 @@
 import flogo from '../../assets/flogo.png'
-import '../../assets/style.scss'
+import '../../assets/styles/style.scss'
 
 function Footer() {
     return (
