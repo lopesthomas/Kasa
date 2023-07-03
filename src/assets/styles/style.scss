@@ -161,7 +161,12 @@ $background-color_1: #FF6060;
 		}
 
 	}
-	
+	.bars{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 76px;
+	}
 	
 }
 

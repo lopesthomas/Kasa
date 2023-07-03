@@ -1,0 +1,42 @@
+.animbar{
+    width: 100%;
+    .animbar-title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 52px;
+        background-color: #FF6060;
+        border-radius: 10px;
+        padding: 0 10px;
+        width: 100%;
+        border: none;
+
+        
+
+        color: #FFF;
+        font-size: 18px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+
+        &:active + .animbar-content{
+            transform: scale(1.0);
+        }
+    }
+    .animbar-content{
+        background-color: #F6F6F6;
+        border-radius: 0 0 10px 10px;
+        padding: 70px 20px 20px 20px;
+
+        color: #FF6060;
+        font-size: 18px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 142.6%;
+        transform: scale(0.1);
+        transition: height 4s ease-in-out;
+    }
+}

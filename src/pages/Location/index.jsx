@@ -5,6 +5,7 @@ import Slider from '../../components/Slider';
 import { useState } from 'react';
 import starActive from '../../assets/star-active.svg'
 import starInactive from '../../assets/star-inactive.svg'
+import AnimBar from '../../components/AnimBar';
 
 function Location() {
     const stars = []
@@ -52,12 +53,14 @@ function Location() {
                     <div className='stars'>{stars}</div>
                 </div>
             </div>
-            <div>
-                <p>Description : {annonce.description}</p>
+            <div className='bars'>
+                {/* <p>Description : {annonce.description}</p>
                 <div>
                     <p>equipements</p>
                     {annonce.equipments.map((item, id) => <p key={id}>{item}</p> )}
-                </div>
+                </div> */}
+                <AnimBar titreBar="Description" ContenuBar={annonce.description}/>
+                <AnimBar titreBar="Equipements" ContenuBar={`${annonce.equipments}`}/>
             </div>
         </div>
         );
