@@ -7,6 +7,9 @@ function AnimBar({titreBar, ContenuBar}) {
             <button className="animbar-title">
                 <p>{titreBar}</p>
                 <img src={arrow} alt=''/>
+
+
+                
             </button>
             <div className="animbar-content">
                Contenu: {ContenuBar} 
