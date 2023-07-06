@@ -1,7 +1,15 @@
-.apropos-content{
-    width: 1023px;
+.apropos{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
 
+    .apropos-content{
+        width: 1023px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+
+    }
 }
