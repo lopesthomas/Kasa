@@ -52,7 +52,7 @@ function Location() {
             </div>
             <div className='bars'>
                 <AnimBar titreBar="Description" ContenuBar={annonce.description}/>
-                <AnimBar titreBar="Equipements" ContenuBar={annonce.equipments.map((item, id) => <p id={item} style={{whiteSpace: 'break-spaces'}} > {item}{"\n"}</p>)}/>
+                <AnimBar titreBar="Equipements" ContenuBar={annonce.equipments.map((item, id) => `${item} \n`)}/>
             </div>
         </div>
         );
