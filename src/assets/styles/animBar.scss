@@ -64,3 +64,18 @@
         transition: all 1s easy;
     }
 }
+
+@media (max-width: 1240px) {
+    .animbar{
+        .animbar-title{
+            font-size: 13px;
+            height: auto;
+            & p{
+                margin: 10px;
+            }
+        }
+        .animbar-content{
+            font-size: 12px;
+        }
+    }
+}

@@ -8,7 +8,7 @@ import bcktop1 from '../../assets/bcktop1.png'
 function Home() {
     return (
         <div>
-            <ImageBanner srcImage={bcktop1} titreBanner="Chez vous, partout et ailleurs"/>
+            <ImageBanner srcImage={bcktop1} titreBanner={`${'Chez vous, '} ${"\n"} ${"partout et ailleurs"}`}/>
             <div className='bck-panel'>
 
                 <Card/>

@@ -15,8 +15,10 @@ import Propos from './pages/Propos';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    
     <App />   
     <Router>
+      <div className='container'>
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -24,8 +26,10 @@ root.render(
         <Route path="/apropos" element={<Propos/>}/>
         <Route path="*" element={<Error/>}/>
       </Routes>
+      </div>
       <Footer />
     </Router>
+    
   </React.StrictMode>
 );
 

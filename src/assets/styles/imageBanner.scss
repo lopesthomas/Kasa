@@ -25,5 +25,20 @@
         position: absolute;
     }
 }
-    
+
+@media (max-width: 1240px) {
+    .bcktop-container{
+        height: 111px;
+        margin-bottom: 22px;
+        .bcktop-img{
+            border-radius: 10px;
+        }
+        h1{
+            font-size: 24px;
+            white-space: break-spaces;
+            left: 5%;
+        }
+    }
+}
+
     

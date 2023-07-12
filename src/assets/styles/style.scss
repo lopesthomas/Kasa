@@ -5,32 +5,11 @@ $background-color_1: #FF6060;
 	src: url('../fonts/Montserrat-Regular.ttf')  format('truetype');
   }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-	align-items: center;
-    margin: 45px 100px;
-	width: 100%;
-
-	.liens {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		a {
-			width: 116px;
-			height: 34px;
-			
-			font-family: 'Montserrat-Regular';
-			font-style: normal;
-			font-weight: 500;
-			font-size: 24px;
-			line-height: 142.6%;
-			text-decoration-color: transparent;
-			color: #FF6060;
-		}
-	}
+.container{
+	margin: 45px 0 0 0;
 }
+
+
 .bck-panel {
 	display: flex;
 	flex-direction: column;
@@ -40,17 +19,17 @@ $background-color_1: #FF6060;
 	
 }
 .cards-container {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 50px;
+	margin: 50px;
 
 	.card {
 		width: 340px;
 		height: 340px;
-		border-radius: 25px;
+		border-radius: 10px;
 		background-color: $background-color_1;
-		margin: 20px;
+		//margin: 20px;
 		position: relative;
 		text-align: center;
 		color: $color_1;
@@ -65,7 +44,7 @@ $background-color_1: #FF6060;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 25px;
+			border-radius: 10px;
 		}
 
 		.card-cover {
@@ -73,7 +52,7 @@ $background-color_1: #FF6060;
 			width: 100%;
 			height: 100%;
 			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-			border-radius: 25px;
+			border-radius: 10px;
 			top: 0;
 			left: 0;
 
@@ -182,18 +161,69 @@ $background-color_1: #FF6060;
 }
 
 @media (max-width: 1240px) {
+	.container{
+		margin: 20px 20px 0 20px;
+	}
+	.bck-panel{
+		background: none;
+		margin-bottom: 27px;
+		.cards-container{
+			grid-template-columns: 1fr;
+			gap: 20px;
+			margin: 0;
+			.card{
+				height: 225px;
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	
 	.location{
 		flex-direction: column;
 		.infos-container{
 			flex-direction: column;
+			margin: 0;
+			.info-location{
+				.titre{
+					font-size: 18px;
+
+				}
+				.adresse{
+					font-size: 14px;
+				}
+				.tags-container{
+					.tag{
+						font-size: 10px;
+						padding: 0 20px;
+					}
+				}
+			}
 			.info-hote{
 				flex-direction: row-reverse;
 				align-items: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				.hote-container{
+					.nom-hote{
+						font-size: 12px;
+					}
+					.photo-hote{
+						width: 32px;
+						height: 32px;
+						border-radius: 32px;
+					}
+				}
+				.stars img{
+					height: 18px;
+				}
 			}
 		}
-	}
-	.bars{
-		flex-direction: column;
+		.bars{
+			flex-direction: column;
+			gap: 20px;
+			margin-bottom: 27px;
+		}	
 	}
 }
 

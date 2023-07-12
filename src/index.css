@@ -25,10 +25,11 @@ code {
     monospace;
 }
 
-@media (max-width: 1240px){
+@media (max-width: 900px){
   body{
+    
     #root {
-      width: 375px;
+      width: 100%;
     }
   }
 }

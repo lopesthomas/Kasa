@@ -1,6 +1,6 @@
 import logoo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
-import '../../assets/styles/style.scss'
+import '../../assets/styles/header.scss'
 
 function Header() {
     return (
