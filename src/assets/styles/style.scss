@@ -158,15 +158,14 @@ $background-color_1: #FF6060;
 
 				}
 			}
-
 		}
-
 	}
 	.bars{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		gap: 76px;
+		margin-bottom: 50px;
 	}
 	
 }
@@ -180,5 +179,21 @@ $background-color_1: #FF6060;
     align-items: center;
     justify-content: space-evenly;
 	width: 100%;
+}
+
+@media (max-width: 1240px) {
+	.location{
+		flex-direction: column;
+		.infos-container{
+			flex-direction: column;
+			.info-hote{
+				flex-direction: row-reverse;
+				align-items: center;
+			}
+		}
+	}
+	.bars{
+		flex-direction: column;
+	}
 }
 

@@ -24,3 +24,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media (max-width: 1240px){
+  body{
+    #root {
+      width: 375px;
+    }
+  }
+}

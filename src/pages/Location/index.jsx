@@ -9,7 +9,6 @@ import AnimBar from '../../components/AnimBar';
 
 function Location() {
     const stars = []
-    const divStars = '<p>star</p>'
     const { idLink } = useParams()
 
       // Recherche l'annonce avec le même ID
@@ -34,8 +33,6 @@ function Location() {
     return (
         <div className='location'>
             <Slider/>
-            {/* {annonce.pictures.map((item, id) => <img key={id} src={item} alt={annonce.titre} /> )} */}
-            
             <div className='infos-container'>
                 <div className='info-location'>
                     <h1 className='titre'>{annonce.title}</h1>
@@ -54,13 +51,8 @@ function Location() {
                 </div>
             </div>
             <div className='bars'>
-                {/* <p>Description : {annonce.description}</p>
-                <div>
-                    <p>equipements</p>
-                    {annonce.equipments.map((item, id) => <p key={id}>{item}</p> )}
-                </div> */}
                 <AnimBar titreBar="Description" ContenuBar={annonce.description}/>
-                <AnimBar titreBar="Equipements" ContenuBar={`${annonce.equipments}`}/>
+                <AnimBar titreBar="Equipements" ContenuBar={annonce.equipments.map((item, id) => <text style={{whiteSpace: 'break-spaces'}} > {item}{"\n"}</text>)}/>
             </div>
         </div>
         );
