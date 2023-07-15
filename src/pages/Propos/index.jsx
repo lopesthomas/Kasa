@@ -2,8 +2,12 @@ import AnimBar from "../../components/AnimBar";
 import '../../assets/styles/propos.scss'
 import bcktop2 from '../../assets/bcktop2.png'
 import ImageBanner from "../../components/ImageBanner";
+import { useEffect } from "react";
 
-function Propos() {
+function Propos(titre) {
+  useEffect(() => {
+    document.title = "Kasa - A Propos"
+  })
     return (
           <div className="apropos">
             <ImageBanner srcImage={bcktop2} />

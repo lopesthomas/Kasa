@@ -2,12 +2,16 @@ import data from '../../data/logements.json'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import Slider from '../../components/Slider';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import starActive from '../../assets/star-active.svg'
 import starInactive from '../../assets/star-inactive.svg'
 import AnimBar from '../../components/AnimBar';
 
-function Location() {
+function Location(titre) {
+    useEffect(() => {
+        document.title = "Kasa - Locations"
+    })
+
     const stars = []
     const { idLink } = useParams()
 

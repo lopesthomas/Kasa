@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 import '../../assets/styles/error.scss'
+import { useEffect } from 'react'
 
-function Error() {
+function Error(titre) {
+    useEffect(() => {
+        document.title = {titre}
+    })
     return (
     <div className='error'>
         <h1>404</h1>

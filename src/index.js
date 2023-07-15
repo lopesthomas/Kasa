@@ -21,10 +21,10 @@ root.render(
       <div className='container'>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/location/:idLink" element={<Location/>}/>
-        <Route path="/apropos" element={<Propos/>}/>
-        <Route path="*" element={<Error/>}/>
+        <Route path="/" element={<Home />}/>
+        <Route path="/location/:idLink" element={<Location />} />
+        <Route path="/apropos" element={<Propos />}/>
+        <Route path="*" element={<Error />}/>
       </Routes>
       </div>
       <Footer />
