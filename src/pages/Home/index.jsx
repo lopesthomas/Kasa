@@ -9,6 +9,15 @@ import { useEffect } from 'react'
 function Home(titre) {
     useEffect(() => {
         document.title = "Kasa - Accueil"
+
+        const metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        metaDescription.content = 'Site web de locations immobilières';
+        document.head.appendChild(metaDescription);
+
+        return () => {
+            document.head.removeChild(metaDescription);
+        };
     })
     return (
         <div>

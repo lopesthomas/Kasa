@@ -6,10 +6,21 @@ import { useEffect, useState } from 'react';
 import starActive from '../../assets/star-active.svg'
 import starInactive from '../../assets/star-inactive.svg'
 import AnimBar from '../../components/AnimBar';
+import Error from '../../components/Error';
 
 function Location(titre) {
     useEffect(() => {
         document.title = "Kasa - Locations"
+
+        const metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        if(annonce){metaDescription.content = annonce.title;}
+        
+        document.head.appendChild(metaDescription);
+
+        return () => {
+            document.head.removeChild(metaDescription);
+        };
     })
 
     const stars = []
@@ -17,11 +28,12 @@ function Location(titre) {
 
       // Recherche l'annonce avec le même ID
     const annonce = data.find(annonce => annonce.id === idLink);
-    const score = annonce.rating
+    
         // Vérifie si l'annonce a été trouvée
     if (!annonce) {
-        return <p>Annonce non trouvée</p>;
-    }
+        return <Error />;
+    } else {
+        const score = annonce.rating
 
     // function addStars(){
         for(let i = 0; i < 5; i++){
@@ -33,7 +45,7 @@ function Location(titre) {
             }
         }
     // }
-    
+
     return (
         <div className='location'>
             <Slider/>
@@ -60,7 +72,7 @@ function Location(titre) {
             </div>
         </div>
         );
-   
+    }
 }
 
 export default Location

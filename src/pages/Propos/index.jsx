@@ -7,6 +7,15 @@ import { useEffect } from "react";
 function Propos(titre) {
   useEffect(() => {
     document.title = "Kasa - A Propos"
+
+    const metaDescription = document.createElement('meta');
+    metaDescription.name = 'description';
+    metaDescription.content = 'Retrouvez les réglements et les conditions aux niveau des annoces et des biens des locations';
+    document.head.appendChild(metaDescription);
+
+    return () => {
+        document.head.removeChild(metaDescription);
+    };
   })
     return (
           <div className="apropos">
