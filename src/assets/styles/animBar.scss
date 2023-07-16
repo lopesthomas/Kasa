@@ -1,3 +1,7 @@
+$color-title: #FFF;
+$color_1: #FF6060;
+$background-color-content: #F6F6F6;
+
 .animbar{
     width: 100%;
     display: flex;
@@ -8,13 +12,13 @@
         align-items: center;
         justify-content: space-between;
         height: 52px;
-        background-color: #FF6060;
+        background-color: $color_1;
         border-radius: 10px;
         padding: 0 10px;
         width: 100%;
         border: none;
 
-        color: #FFF;
+        color: $color-title;
         font-size: 18px;
         font-family: Montserrat;
         font-style: normal;
@@ -33,11 +37,11 @@
     }
 
     .animbar-content{
-        background-color: #F6F6F6;
+        background-color: $background-color-content;
         border-radius: 0 0 10px 10px;
         padding: 0px 20px 0px 20px;
         height: 0;
-        color: #FF6060;
+        color: $color_1;
         font-size: 18px;
         font-family: Montserrat;
        // font-style: normal;

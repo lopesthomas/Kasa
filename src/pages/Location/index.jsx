@@ -1,12 +1,12 @@
 import data from '../../data/logements.json'
-import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import Slider from '../../components/Slider';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import starActive from '../../assets/star-active.svg'
 import starInactive from '../../assets/star-inactive.svg'
 import AnimBar from '../../components/AnimBar';
 import Error from '../../components/Error';
+import '../../assets/styles/locationPage.scss'
 
 function Location(titre) {
     useEffect(() => {

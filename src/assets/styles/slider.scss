@@ -2,6 +2,7 @@
 	font-family: Montserrat;
 	src: url('../fonts/Montserrat-Regular.ttf')  format('truetype');
   }
+$color-text: #FFF;
 
 .slider{
     height: 415px;
@@ -20,7 +21,6 @@
         top: 0;
         left: 24px;
         bottom: 0;
-        /* right: 0; */
         background: transparent;
         border: none;
     }
@@ -41,7 +41,7 @@
         bottom: 0;
         object-position: center;
 
-        color: #FFF;
+        color: $color-text;
         text-align: center;
         font-size: 18px;
         font-family: Montserrat;
@@ -55,7 +55,6 @@
         width: 100%;
         height: 255px;
         .slider-button-preced{
-            //width: 30%;
             left: 0;
             & img {
                 width: 30%;

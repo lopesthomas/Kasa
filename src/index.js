@@ -9,7 +9,6 @@ import Home from './pages/Home';
 import Location from './pages/Location';
 import Error from './components/Error';
 import Footer from './components/Footer';
-import AnimBar from './components/AnimBar';
 import Propos from './pages/Propos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

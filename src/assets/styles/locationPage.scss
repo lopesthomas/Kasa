@@ -1,0 +1,143 @@
+$color_1: #FF6060;
+$color-text-tag: #FFF;
+
+.location{
+	width: 100%;
+
+	.infos-container{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 30px 0;
+
+		.info-location{
+			.titre{
+				color: $color_1;
+				font-size: 36px;
+				font-family: Montserrat;
+				font-weight: 500;
+				line-height: 142.6%;
+			}
+			.adresse{
+				color: $color_1;
+				font-size: 18px;
+				font-family: Montserrat;
+				font-weight: 500;
+				line-height: 142.6%;
+			}
+			.tags-container{
+				display: flex;
+				flex-direction: row;
+				gap: 10px;
+				flex-wrap: wrap;
+		
+				.tag{
+					background-color: $color_1;
+					height: 25px;
+					border-radius: 10px;
+					padding: 0 40px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin: 0;
+					
+		
+					color: $color-text-tag;
+					text-align: center;
+					font-size: 14px;
+					font-family: Montserrat;
+					font-weight: 500;
+					line-height: 142.6%;
+					text-wrap: nowrap;
+				}
+			}
+	
+		}
+		.info-hote{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.hote-container{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 10px;
+				justify-content: flex-end;
+				.nom-hote{
+					color: $color_1;
+					text-align: right;
+					font-size: 18px;
+					font-family: Montserrat;
+					font-weight: 500;
+					line-height: 142.6%;
+					inline-size: min-content;
+				}
+				.photo-hote{
+					width: 64px;
+					height: 64px;
+					border-radius: 64px;
+
+				}
+			}
+		}
+	}
+	.bars{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 76px;
+		margin-bottom: 50px;
+	}
+	
+}
+
+@media (max-width: 1240px) {
+    .location{
+		flex-direction: column;
+		.infos-container{
+			flex-direction: column;
+			margin: 0;
+			.info-location{
+				.titre{
+					font-size: 18px;
+
+				}
+				.adresse{
+					font-size: 14px;
+				}
+				.tags-container{
+					.tag{
+						font-size: 10px;
+						padding: 0 20px;
+						height: 18px;
+						border-radius: 5px;
+					}
+				}
+			}
+			.info-hote{
+				flex-direction: row-reverse;
+				align-items: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				.hote-container{
+					.nom-hote{
+						font-size: 12px;
+					}
+					.photo-hote{
+						width: 32px;
+						height: 32px;
+						border-radius: 32px;
+					}
+				}
+				.stars img{
+					height: 18px;
+				}
+			}
+		}
+		.bars{
+			flex-direction: column;
+			gap: 20px;
+			margin-bottom: 27px;
+		}	
+	}
+}
