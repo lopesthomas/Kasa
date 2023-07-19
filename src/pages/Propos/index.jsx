@@ -4,7 +4,7 @@ import bcktop2 from '../../assets/bcktop2.png'
 import ImageBanner from "../../components/ImageBanner";
 import { useEffect } from "react";
 
-function Propos(titre) {
+function Propos() {
   useEffect(() => {
     document.title = "Kasa - A Propos"
 

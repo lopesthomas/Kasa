@@ -8,7 +8,7 @@ import AnimBar from '../../components/AnimBar';
 import Error from '../../components/Error';
 import '../../assets/styles/locationPage.scss'
 
-function Location(titre) {
+function Location() {
     useEffect(() => {
         document.title = "Kasa - Locations"
 

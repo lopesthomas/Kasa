@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 
 
-function Home(titre) {
+function Home() {
     useEffect(() => {
         document.title = "Kasa - Accueil"
 
