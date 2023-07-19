@@ -7,6 +7,7 @@ import starInactive from '../../assets/star-inactive.svg'
 import AnimBar from '../../components/AnimBar';
 import Error from '../../components/Error';
 import '../../assets/styles/locationPage.scss'
+import Tag from '../../components/Tag';
 
 function Location() {
     useEffect(() => {
@@ -54,7 +55,7 @@ function Location() {
                     <h1 className='titre'>{annonce.title}</h1>
                     <p className='adresse'>{annonce.location}</p>
                     <div className='tags-container'>
-                        {annonce.tags.map((item, id) => <p className='tag' key={id} >{item}</p> )}
+                        {annonce.tags.map((item, id) => <Tag key={id} tag={item}/>)}
                     </div> 
                 </div>
                 <div className='info-hote'>
