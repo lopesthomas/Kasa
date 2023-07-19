@@ -3,6 +3,7 @@ import '../../assets/styles/style.scss'
 import ImageBanner from '../../components/ImageBanner'
 import bcktop1 from '../../assets/bcktop1.png'
 import { useEffect } from 'react'
+import data from '../../data/logements.json'
 
 
 
@@ -23,8 +24,12 @@ function Home() {
         <div>
             <ImageBanner srcImage={bcktop1} titreBanner={`${'Chez vous, '} ${"\n"} ${"partout et ailleurs"}`}/>
             <div className='bck-panel'>
-
-                <Card/>
+                <div className='cards-container'>
+                    {data.map((item, i) => (
+                        <Card key={i} id={item.id} cover={item.cover} tags={item.tags} title={item.title}/>
+                    ))}
+                </div>
+                
             </div>
         </div>)
     
