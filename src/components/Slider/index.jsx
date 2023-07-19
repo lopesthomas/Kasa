@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
-import data from '../../data/logements.json'
-import { useParams } from 'react-router-dom'
 import '../../assets/styles/slider.scss'
 import leftArrow from '../../assets/VectorLeftMax.svg'
 import rightArrow from '../../assets/VectorRightMax.svg'
 
-function Slider() {
+function Slider({pictures}) {
 
     const [imageIndex, setImageIndex] = useState(0);
-    const { idLink } = useParams()
-    const annonce = data.find(annonce => annonce.id === idLink)
-    const pictures = annonce.pictures
     const currentPicture = pictures[imageIndex];
 
     function preced() {
         if (imageIndex > 0){
             setImageIndex(imageIndex - 1)
         } else {
-            setImageIndex(annonce.pictures.length - 1)
+            setImageIndex(pictures.length - 1)
         }
     }
 

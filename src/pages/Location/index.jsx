@@ -49,7 +49,7 @@ function Location() {
 
     return (
         <div className='location'>
-            <Slider/>
+            <Slider pictures={annonce.pictures}/>
             <div className='infos-container'>
                 <div className='info-location'>
                     <h1 className='titre'>{annonce.title}</h1>
