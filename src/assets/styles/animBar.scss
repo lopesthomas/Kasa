@@ -74,7 +74,10 @@ $background-color-content: #F6F6F6;
     .animbar{
         .animbar-title{
             font-size: 13px;
-            height: auto;
+            height: 30px;
+            & img{
+                height: 18px;
+            }
             & p{
                 margin: 10px;
             }
